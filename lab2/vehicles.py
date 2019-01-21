@@ -42,8 +42,3 @@ if __name__ == "__main__":
     axes = plt.gca()
     axes.set_xlabel('Vehicle')
     axes.set_ylabel('Number')
-
-    sns_plot2.savefig("histogram.png", bbox_inches='tight')
-    sns_plot2.savefig("histogram.pdf", bbox_inches='tight')
-
-

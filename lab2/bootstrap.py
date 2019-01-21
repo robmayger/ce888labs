@@ -7,6 +7,13 @@ import numpy as np
 
 def boostrap(sample, sample_size, iterations):
 	# <---INSERT YOUR CODE HERE--->
+	np.asarray(sample)
+	np.resize(sample, (iterations, sample_size))
+	data_mean = np.mean(sample)
+	iteration_mean = []
+	for line in sample:
+		iteration mean.append(np.mean(line))
+	print(iteration_mean)
 	return data_mean, lower, upper
 
 
