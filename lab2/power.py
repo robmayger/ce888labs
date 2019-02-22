@@ -4,11 +4,8 @@ import pandas as pd
 def power(sample1, sample2, reps, size, alpha):
     count = 0
     for i in range(0, reps):
-        random_sample1 = []
-        random_sample2 = []
-        for x in range(0, size):
-            random_sample1.append(sample1[np.random.randint(0, len(sample1))])
-            random_sample2.append(sample2[np.random.randint(0, len(sample2))])
+        random_sample1 = np.random.choice(sample1, size)
+        random_sample2 = np.random.choice(sample2, size)
         cat_arr = np.concatenate((random_sample1, random_sample2))
         np.random.shuffle(cat_arr)
         random_shuffle_sample1 = cat_arr[:size]

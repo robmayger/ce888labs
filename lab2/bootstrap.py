@@ -9,12 +9,12 @@ def boostrap(sample, sample_size, iterations, percentile):
     samples = []
     means = []
     for i in range(0, iterations):
-        samples.append(np.random.choice(sample, sample_size))
-        means.append(np.mean(sample))
+        random_sample = np.random.choice(sample, sample_size)
+        samples.append(random_sample)
+        means.append(random_sample)
     data_mean = np.mean(samples)            
     lower = np.percentile(means, (100 - percentile)/2)
     upper = np.percentile(means, percentile + ((100-percentile)/2))
-	
     return data_mean, lower, upper
 
 
